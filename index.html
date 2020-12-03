@@ -1,1 +1,156 @@
-Hello world
+<!DOCTYPE html>
+<head>
+  <title>Multi-Speaker Singing Voice Synthesis from Musical Scores using Voice Conversion</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: auto;
+      padding: 5%;
+      max-width: 1000px;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+    td img {
+      width: 100%;
+    }
+    th, td {
+      padding: 0px;
+      padding-bottom: 0px;
+      padding-top: 0px;
+    }
+    audio {
+      width: 240px;
+      height: 30px;
+    }
+    table {
+      max-width: 80%;
+    }
+    h1 {
+      font-size: 35px;
+    }
+    h2 {
+      font-size: 25px;
+      font-weight: normal;
+    }
+    p {
+      font-size: 16px;
+    }
+    controls {
+      width: 300px;
+      height: 60px;
+    }
+  </style>
+</head>
+<body>
+
+<div style="max-width: 80%; margin-right: auto; margin-left:auto;">
+  <h1 style="text-align:center; font-size: 40px;">Multi-Speaker Singing Voice Synthesis from Musical Scores using Voice Conversion</h1>
+</div>
+
+<br/>
+<br/>
+<br/>
+
+<p> Reference speech samples from aidatatang_200hz dataset. </p>
+
+<table align="center" style="text-align: center;">
+<tr>
+  <td><audio controls style="width:150px;"> <source src="samples/real/T0055G0136S0021.wav"> </audio></td>
+  <td><audio controls style="width:150px;"> <source src="samples/real/T0055G0201S0033.wav"> </audio></td>
+  <td><audio controls style="width:150px;"> <source src="samples/real/T0055G0074S0010.wav"> </audio></td>
+  <td><audio controls style="width:150px;"> <source src="samples/real/T0055G0019S0039.wav"> </audio></td>
+</tr>
+</table>
+
+<br/>
+
+<p> </p>
+
+<table align="center" style="text-align: center;">
+  <tr>
+    <td></td>
+    <td>Original voice</td>
+    <td>生日快樂</td>
+    <td>你，好不好？</td>
+    <td>泡沫</td>
+    <td>月亮代表我的心</td>
+    <td>你的秘密</td>
+  </tr>
+  <tr>
+    <td>Prerecord Singing Voice</td>
+    <td><audio controls style="width:150px;"> <source src=""> </audio></td>
+    <td><audio controls style="width:150px;"> <source src="samples/song2/生日快樂_hill.wav"> </audio></td>
+    <td><audio controls style="width:150px;"> <source src="samples/song3/你好不好_hill.wav"> </audio></td>
+    <td><audio controls style="width:150px;"> <source src="samples/song4/泡沫_hill.wav"> </audio></td>
+    <td><audio controls style="width:150px;"> <source src="samples/song1/月亮代表我的心_hill.wav"> </audio></td>
+    <td><audio controls style="width:150px;"> <source src="samples/song5/你的秘密_hill.wav"> </audio></td>
+  </tr>
+  <tr>
+    <td>Female 1</td> <!-- 136 -->
+    <td><audio controls style="width:150px;"> <source src="samples/real/T0055G0136S0021.wav"> </audio></td>
+    <td><audio controls style="width:150px;"> <source src="samples/song2/生日快樂_G0136.wav"> </audio></td>
+    <td><audio controls style="width:150px;"> <source src="samples/song3/你好不好_G0136.wav"> </audio></td>
+    <td><audio controls style="width:150px;"> <source src="samples/song4/泡沫_G0136.wav"> </audio></td>
+    <td><audio controls style="width:150px;"> <source src="samples/song1/月亮代表我的心_G0136.wav"> </audio></td>
+    <td><audio controls style="width:150px;"> <source src="samples/song5/你的秘密_G0136.wav"> </audio></td>
+  </tr>
+  <tr>
+    <td>Female 2</td> <!-- 201 -->
+    <td><audio controls style="width:150px;"> <source src="samples/real/T0055G0201S0033.wav"> </audio></td>
+    <td><audio controls style="width:150px;"> <source src="samples/song2/生日快樂_G0201.wav"> </audio></td>
+    <td><audio controls style="width:150px;"> <source src="samples/song3/你好不好_G0201.wav"> </audio></td>
+    <td><audio controls style="width:150px;"> <source src="samples/song4/泡沫_G0201.wav"> </audio></td>
+    <td><audio controls style="width:150px;"> <source src="samples/song1/月亮代表我的心_G0201.wav"> </audio></td>
+    <td><audio controls style="width:150px;"> <source src="samples/song5/你的秘密_G0201.wav"> </audio></td>
+  </tr>
+  <tr>
+    <td>Female 3</td> <!-- 74 -->
+    <td><audio controls style="width:150px;"> <source src="samples/real/T0055G0074S0010.wav"> </audio></td>
+    <td><audio controls style="width:150px;"> <source src="samples/song2/生日快樂_G0074.wav"> </audio></td>
+    <td><audio controls style="width:150px;"> <source src="samples/song3/你好不好_G0074.wav"> </audio></td>
+    <td><audio controls style="width:150px;"> <source src="samples/song4/泡沫_G0074.wav"> </audio></td>
+    <td><audio controls style="width:150px;"> <source src="samples/song1/月亮代表我的心_G0074.wav"> </audio></td>
+    <td><audio controls style="width:150px;"> <source src="samples/song5/你的秘密_G0074.wav"> </audio></td>
+  </tr>
+  <tr>
+    <td>Male 1</td> <!-- 19 -->
+    <td><audio controls style="width:150px;"> <source src="samples/real/T0055G0019S0039.wav"> </audio></td>
+    <td><audio controls style="width:150px;"> <source src="samples/song2/生日快樂_G0019.wav"> </audio></td>
+    <td><audio controls style="width:150px;"> <source src="samples/song3/你好不好_G0019.wav"> </audio></td>
+    <td><audio controls style="width:150px;"> <source src="samples/song4/泡沫_G0019.wav"> </audio></td>
+    <td><audio controls style="width:150px;"> <source src="samples/song1/月亮代表我的心_G0019.wav"> </audio></td>
+    <td><audio controls style="width:150px;"> <source src="samples/song5/你的秘密_G0019.wav"> </audio></td>
+  </tr>
+  <tr>
+    <td>Male 1</td> <!-- 743 -->
+    <td><audio controls style="width:150px;"> <source src="samples/real/T0055G0743S0014.wav"> </audio></td>
+    <td><audio controls style="width:150px;"> <source src="samples/song2/生日快樂_G0743.wav"> </audio></td>
+    <td><audio controls style="width:150px;"> <source src="samples/song3/你好不好_G0743.wav"> </audio></td>
+    <td><audio controls style="width:150px;"> <source src="samples/song4/泡沫_G0743.wav"> </audio></td>
+    <td><audio controls style="width:150px;"> <source src="samples/song1/月亮代表我的心_G0743.wav"> </audio></td>
+    <td><audio controls style="width:150px;"> <source src="samples/song5/你的秘密_G0743.wav"> </audio></td>
+  </tr>
+</table>
+
+<br/>
+
+<br/>
+<br/>
+<br/>
+
+
+
+<script>
+  let players = Array.prototype.slice.call(document.querySelectorAll('audio'));
+  players.forEach(player => {
+      player.addEventListener('play', event => {
+          players.forEach(p => {
+              if (player != p) {p.pause();}
+          });
+      });
+  });
+</script>
+</body>
